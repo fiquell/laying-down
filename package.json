@@ -1,11 +1,16 @@
 {
-  "name": "laying-down",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "name": "laying-down",
+    "module": "index.ts",
+    "type": "module",
+    "scripts": {
+        "dev": "bun --hot run src/index.ts",
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "bun-types": "latest",
+        "prettier": "^3.0.3"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
 }
