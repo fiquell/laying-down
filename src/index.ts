@@ -15,9 +15,11 @@ const server = serve({
             )
         }
 
-        if (url.pathname === "/sleep") {
+        if (url.pathname === "/suspend") {
             spawn(["systemctl", "suspend"])
-            return new Response(`<button type="button" disabled>Sleep</button>`)
+            return new Response(
+                `<button type="button" disabled>Suspend</button>`
+            )
         }
 
         return new Response("404!", { status: 404 })
