@@ -8,6 +8,13 @@ const server = serve({
             return new Response(file("public/index.html"))
         }
 
+        if (url.pathname === "/power-off") {
+            spawn(["systemctl", "poweroff"])
+            return new Response(
+                `<button type="button" disabled>Power Off</button>`
+            )
+        }
+
         if (url.pathname === "/sleep") {
             spawn(["systemctl", "suspend"])
             return new Response(`<button type="button" disabled>Sleep</button>`)

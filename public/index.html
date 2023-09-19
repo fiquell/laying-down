@@ -6,23 +6,24 @@
         <title>Laying Down</title>
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css" />
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
         <script src="https://unpkg.com/htmx.org@1.9.5"></script>
     </head>
     <body>
-        <main>
+        <main class="container">
             <h1>Laying Down</h1>
-            <button
-                type="button"
-                hx-post="/sleep"
-                hx-swap="outerHTML"
-                hx-confirm="Are you sure?">
-                Sleep
-            </button>
+            <div hx-confirm="Are you sure?" class="grid">
+                <button type="button" hx-post="/power-off" hx-swap="outerHTML">
+                    Power Off
+                </button>
+                <button type="button" hx-post="/sleep" hx-swap="outerHTML">
+                    Sleep
+                </button>
+            </div>
         </main>
-        <footer>
+        <footer class="container">
             <a href="https://github.com/fiquell/laying-down" target="_blank">
-                laying-down v0.1.0
+                laying-down v0.2.0
             </a>
         </footer>
     </body>
