@@ -4,3 +4,12 @@
     --primary-hover: #2196f3;
     --primary-focus: rgba(30, 136, 229, 0.25);
 }
+
+main {
+    margin-top: 3rem;
+}
+
+footer {
+    margin-top: 3rem;
+    text-align: center;
+}

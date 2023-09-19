@@ -15,6 +15,13 @@ const server = serve({
             )
         }
 
+        if (path === "/reboot") {
+            spawn(["systemctl", "reboot"])
+            return new Response(
+                `<button type="button" disabled>Reboot</button>`
+            )
+        }
+
         if (path === "/suspend") {
             spawn(["systemctl", "suspend"])
             return new Response(
