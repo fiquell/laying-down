@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Laying Down</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css" />
+        <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Laying Down</h1>
+            <button
+                type="button"
+                hx-post="/sleep"
+                hx-swap="outerHTML"
+                hx-confirm="Are you sure?">
+                Sleep
+            </button>
+        </main>
+        <footer>
+            <a href="https://github.com/fiquell/laying-down" target="_blank">
+                laying-down v0.1.0
+            </a>
+        </footer>
+    </body>
+</html>
