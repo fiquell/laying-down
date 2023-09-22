@@ -1,11 +1,12 @@
 {
     "name": "laying-down",
     "version": "0.3.0",
-    "description": "Control your PC using your phone",
+    "description": "A simple web server to control your computer",
     "type": "module",
     "license": "MIT",
     "scripts": {
         "dev": "bun --hot run src/index.ts",
+        "start": "bun src/index.ts",
         "format": "prettier --write ."
     },
     "devDependencies": {
