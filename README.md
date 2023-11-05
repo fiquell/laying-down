@@ -1,9 +1,6 @@
 # laying-down
 
-`laying-down` is a simple web server designed to serve as a basic interface for
-controlling your computer remotely via smartphone. Additionally, it facilitates
-the management of various system operations, such as `shutdown`, `restart`, and
-`suspend`.
+`laying-down` is a simple web server designed to serve as a basic interface for controlling your computer remotely via smartphone. Additionally, it facilitates the management of various system operations, such as `shutdown`, `restart`, and `suspend`.
 
 ## Stack
 
@@ -26,10 +23,3 @@ Getting started is a breeze:
   ```bash
   bun dev
   ```
-
-That's it! Dive headfirst into your development journey and revel in a truly
-effortless experience.
-
----
-
-Unlock the potential of remote computer management with `laying-down` today!
