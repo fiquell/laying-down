@@ -1,19 +1,17 @@
 {
-    "name": "laying-down",
-    "version": "0.3.0",
-    "description": "A simple web server to control your computer",
-    "type": "module",
-    "license": "MIT",
-    "scripts": {
-        "dev": "bun --hot run src/index.ts",
-        "start": "bun src/index.ts",
-        "format": "prettier --write ."
-    },
-    "devDependencies": {
-        "bun-types": "latest",
-        "prettier": "^3.0.3"
-    },
-    "peerDependencies": {
-        "typescript": "^5.0.0"
-    }
+  "name": "laying-down",
+  "version": "1.0.0",
+  "description": "A simple web server to control your computer",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "bun --hot run src/index.ts",
+    "start": "bun src/index.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
 }

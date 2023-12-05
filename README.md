@@ -6,7 +6,15 @@
 
 - [Bun](https://bun.sh) - A fast all-in-one JavaScript runtime
 - [HTMX](https://htmx.org) - High power tools for HTML
-- [Pico CSS](https://picocss.com) - Minimal CSS Framework for semantic HTML
+- [Beer CSS](https://beercss.com) - Build material design interfaces in record time, without stress for devs
+
+## Quick Installation
+
+Start a hassle-free installation with a single command:
+
+```bash
+curl -fsSL https://github.com/fiquell/laying-down/raw/main/install.sh | bash
+```
 
 ## Development
 

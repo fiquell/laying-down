@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple web server to control your computer" />
+    <title>LD</title>
+    <link rel="icon" href="https://fiquell.com/favicon.ico" />
+    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/beercss@3.4.9/dist/cdn/beer.min.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.4.9/dist/cdn/beer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.0/dist/cdn/material-dynamic-colors.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+  </head>
+  <body class="dark">
+    <header>
+      <nav>
+        <a href="/" class="button transparent circle">
+          <i>pets</i>
+        </a>
+        <div class="max"></div>
+        <a href="https://github.com/fiquell/laying-down" class="button">
+          <i>code</i>
+        </a>
+      </nav>
+    </header>
+    <main class="responsive">
+      <article>
+        <h6>Laying Down</h6>
+        <p>Laying Down is a simple web server designed to serve as a basic interface for controlling your computer remotely via smartphone.</p>
+        <p>Additionally, it facilitates the management of various system operations, such as shutdown, restart, and suspend.</p>
+      </article>
+      <article>
+        <p>Shutdown the system.</p>
+        <nav class="right-align">
+          <button type="button" id="btn-shutdown" data-ui="#shutdown">Shutdown</button>
+        </nav>
+        <dialog id="shutdown" class="bottom">
+          <p class="large-text bold">Shutdown</p>
+          <p>Are you sure?</p>
+          <nav class="right-align">
+            <button type="button" data-ui="#shutdown" class="border">Cancel</button>
+            <button type="button" data-ui="#shutdown" hx-post="/shutdown" hx-target="#btn-shutdown" hx-swap="outerHTML">Confirm</button>
+          </nav>
+        </dialog>
+      </article>
+      <article>
+        <p>Restart the system.</p>
+        <nav class="right-align">
+          <button type="button" id="btn-restart" data-ui="#restart">Restart</button>
+        </nav>
+        <dialog id="restart" class="bottom">
+          <p class="large-text bold">Restart</p>
+          <p>Are you sure?</p>
+          <nav class="right-align">
+            <button type="button" data-ui="#restart" class="border">Cancel</button>
+            <button type="button" data-ui="#restart" hx-post="/restart" hx-target="#btn-restart" hx-swap="outerHTML">Confirm</button>
+          </nav>
+        </dialog>
+      </article>
+      <article>
+        <p>Suspend the system.</p>
+        <nav class="right-align">
+          <button type="button" id="btn-suspend" data-ui="#suspend">Suspend</button>
+        </nav>
+        <dialog id="suspend" class="bottom">
+          <p class="large-text bold">Suspend</p>
+          <p>Are you sure?</p>
+          <nav class="right-align">
+            <button type="button" data-ui="#suspend" class="border">Cancel</button>
+            <button type="button" data-ui="#suspend" hx-post="/suspend" hx-target="#btn-suspend" hx-swap="outerHTML">Confirm</button>
+          </nav>
+        </dialog>
+      </article>
+      <div class="fixed bottom left margin">
+        <button type="button" id="btn-command" data-ui="#command" class="circle extra">
+          <i>add</i>
+        </button>
+        <dialog id="command" class="bottom">
+          <p class="large-text bold">Command</p>
+          <form hx-post="/command" hx-target="#btn-command">
+            <div class="field round border">
+              <input type="text" name="command" required />
+            </div>
+            <nav class="right-align">
+              <button type="button" data-ui="#command" class="border">Cancel</button>
+              <button type="submit" data-ui="#command">Confirm</button>
+            </nav>
+          </form>
+        </dialog>
+      </div>
+    </main>
+  </body>
+</html>
