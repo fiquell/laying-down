@@ -17,7 +17,11 @@ const server = serve({
         spawn(["systemctl", "suspend"]);
         return new Response("<button type='button' disabled>Suspend</button>");
       case "/command":
-        spawn(["sh", "-c", new URLSearchParams(await req.text()).get("command")!]);
+        spawn([
+          "sh",
+          "-c",
+          new URLSearchParams(await req.text()).get("command")!,
+        ]);
         return new Response("<i>done</i>");
       default:
         return new Response(file("src/styles" + pathname));
