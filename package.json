@@ -5,11 +5,11 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "bun --hot run src/index.ts",
+    "dev": "bun --hot src/index.ts",
     "start": "bun src/index.ts"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
