@@ -1,3 +1,8 @@
+header {
+  margin: 1rem 0.5rem;
+  border-radius: 0.75rem;
+}
+
 header > nav > a:nth-of-type(1) {
   transform: rotate(45deg);
 }
