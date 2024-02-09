@@ -6,7 +6,7 @@
 
 - [Bun](https://bun.sh) - A fast all-in-one JavaScript runtime
 - [HTMX](https://htmx.org) - High power tools for HTML
-- [Beer CSS](https://beercss.com) - Build material design interfaces in record time, without stress for devs
+- [Beer CSS](https://beercss.com) - Build material design in record time, without stress for devs
 
 ## Quick Installation
 
